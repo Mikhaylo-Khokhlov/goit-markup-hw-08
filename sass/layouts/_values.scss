@@ -1,0 +1,29 @@
+.values__block {
+  margin-right: calc(-1 * 30px);
+}
+
+.values__title {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $title-text-color;
+}
+
+.values__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 270px;
+  min-height: 120px;
+  margin-bottom: 30px;
+
+  background: #f5f4fa;
+  border-radius: 4px;
+}
+
+.values__item {
+  flex-basis: calc((100% - 4 * 30px) / 4);
+  margin-right: 30px;
+}

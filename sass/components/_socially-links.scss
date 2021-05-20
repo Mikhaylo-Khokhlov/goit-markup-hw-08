@@ -1,0 +1,33 @@
+.socially {
+  display: flex;
+  margin-right: -10px;
+}
+
+.socially__item {
+  flex-basis: calc((100% - 4 * 10) / 4);
+  margin-right: 10px;
+}
+
+.socially__link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  color: #afb1b8;
+
+  transition: color $primary-time $primary-cubic,
+    background-color $primary-time $primary-cubic;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $primary-color;
+  }
+}
+
+.socially__icon {
+  fill: currentColor;
+}

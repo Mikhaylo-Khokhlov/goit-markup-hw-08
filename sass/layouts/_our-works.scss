@@ -1,0 +1,124 @@
+.filter__btn {
+  padding: 6px 22px;
+
+  background-color: #f5f4fa;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  color: $title-text-color;
+
+  transition: color $primary-time $primary-cubic,
+    background-color $primary-time $primary-cubic,
+    box-shadow $primary-time $primary-cubic;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $primary-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.filter__btn--all {
+  background-color: $accent-color;
+  color: $primary-color;
+}
+
+.work__title {
+  margin-bottom: 4px;
+
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: $title-text-color;
+}
+
+.work__description {
+  font-size: 16px;
+  line-height: 1.88;
+}
+
+.work {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(-1 * 30px);
+  margin-bottom: calc(-1 * 30px);
+}
+
+.work__item {
+  flex-basis: calc((100% - 3 * 30px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+
+  cursor: pointer;
+}
+
+.work__content {
+  padding: 20px 24px;
+  border-bottom: 1px solid #eee;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+}
+
+.product {
+  position: relative;
+  overflow: hidden;
+}
+
+.product__content {
+  font-size: 18px;
+  line-height: 1.56;
+  color: $primary-color;
+}
+
+.product__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+
+  transform: translateY(100%);
+  transition: transform $primary-time $primary-cubic,
+    opacity $primary-time $primary-cubic;
+}
+
+.work__link {
+  text-decoration: none;
+  color: inherit;
+
+  transition: box-shadow $primary-time $primary-cubic;
+
+  &:hover,
+  &:focus {
+    display: block;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  &:hover .product__overlay,
+  &:focus .product__overlay {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
