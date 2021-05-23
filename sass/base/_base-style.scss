@@ -55,12 +55,19 @@ img {
 }
 
 .section-title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  font-size: 28px;
+  line-height: 1.18;
 
-  font-size: 36px;
-  line-height: 1.17;
   text-align: center;
   color: $title-text-color;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 
 .link {
@@ -103,8 +110,6 @@ img {
 }
 
 .block {
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
-  }
+  display: flex;
+  flex-wrap: wrap;
 }
