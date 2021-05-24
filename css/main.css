@@ -873,7 +873,7 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .footer__tablet {
     display: flex;
     align-items: baseline;
@@ -923,6 +923,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .footer__social {
+    margin-bottom: 0;
     margin-right: 93px;
   }
 }
@@ -952,7 +953,7 @@ img {
   .subscribe__input {
     margin-right: 12px;
     margin-bottom: 0;
-    min-width: 358px;
+    width: 358px;
   }
 }
 
