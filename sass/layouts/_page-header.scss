@@ -1,9 +1,6 @@
 .header__container {
   display: flex;
   justify-content: space-between;
-
-  @media screen and (min-width: 767px) and (max-width: 1199px) {
-  }
 }
 
 .header {
@@ -114,7 +111,6 @@
   position: absolute;
   top: 10px;
   right: 15px;
-  z-index: 1000;
 
   display: flex;
   align-items: center;
@@ -125,6 +121,10 @@
   background: $primary-color;
   cursor: pointer;
   fill: #000;
+
+  &.is-open {
+    z-index: 1000;
+  }
 
   &:hover,
   &:focus {

@@ -23,12 +23,27 @@
 
 .filter {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: 768px) {
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
 .filter__item:not(:last-child) {
   margin-right: 8px;
+  margin-bottom: 15px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
 }
 
 .filter__btn--all {
@@ -51,18 +66,27 @@
 }
 
 .work {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: calc(-1 * 30px);
   margin-bottom: calc(-1 * 30px);
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: calc(-1 * 30px);
+  }
 }
 
 .work__item {
-  flex-basis: calc((100% - 3 * 30px) / 3);
-  margin-right: 30px;
   margin-bottom: 30px;
 
   cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    margin-right: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 3 * 30px) / 3);
+  }
 }
 
 .work__content {

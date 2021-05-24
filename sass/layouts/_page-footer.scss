@@ -33,6 +33,10 @@
   margin-bottom: 60px;
 
   font-style: inherit;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
 }
 
 .address__content {
