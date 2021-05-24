@@ -8,6 +8,7 @@
   min-height: 400px;
   text-align: center;
   background-repeat: no-repeat;
+  background-size: cover;
 
   background-image: linear-gradient(
       to right,
@@ -15,7 +16,6 @@
       rgba(47, 48, 58, 0.4)
     ),
     url(.././images/mobile/hero/Hero.jpg);
-  background-size: cover;
 
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
