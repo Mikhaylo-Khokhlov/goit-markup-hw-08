@@ -83,6 +83,7 @@
   @media screen and (min-width: 768px) {
     flex-basis: calc((100% - 2 * 30px) / 2);
     margin-right: 30px;
+    display: flex;
   }
   @media screen and (min-width: 1200px) {
     flex-basis: calc((100% - 3 * 30px) / 3);
@@ -94,6 +95,7 @@
   border-bottom: 1px solid #eee;
   border-left: 1px solid #eee;
   border-right: 1px solid #eee;
+  flex-grow: 1;
 }
 
 .product {
@@ -128,6 +130,9 @@
 }
 
 .work__link {
+  display: flex;
+  flex-direction: column;
+
   text-decoration: none;
   color: inherit;
 

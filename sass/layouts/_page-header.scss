@@ -44,6 +44,10 @@
   }
 }
 
+.mobile-menu__link--current {
+  color: $accent-color;
+}
+
 .header__link--current {
   position: relative;
 
