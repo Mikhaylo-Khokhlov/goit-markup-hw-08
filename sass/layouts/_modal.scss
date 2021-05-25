@@ -52,9 +52,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-
-  height: 609px;
-  max-width: 450px;
+  min-height: 609px;
   max-height: 100vh;
   padding: 40px;
 
@@ -66,12 +64,16 @@
   transform: translate(-50%, -50%) scale(1);
   transition: transform $primary-time $primary-cubic;
 
+  @media screen and (max-width: 479px) {
+    width: 100%;
+  }
+
   @media screen and (min-width: 480px) {
     min-width: 450px;
   }
 
   @media screen and (min-width: 1200px) {
-    height: 581px;
+    min-height: 581px;
     min-width: 528px;
   }
 }

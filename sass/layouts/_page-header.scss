@@ -122,6 +122,7 @@
   justify-content: center;
   width: 40px;
   height: 40px;
+  padding: 0px;
 
   background: $primary-color;
   cursor: pointer;
@@ -142,7 +143,13 @@
 }
 
 .header__btn .icon-cross {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(100%, 0);
+
+  transition: opacity $primary-time $primary-cubic,
+    visibility $primary-time $primary-cubic,
+    transform $primary-time $primary-cubic;
 }
 
 .header__btn.is-open {
@@ -153,6 +160,9 @@
 
 .header__btn.is-open .icon-cross {
   display: block;
+  visibility: inherit;
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 .header__btn.is-open .icon-menu {
@@ -176,14 +186,17 @@
   z-index: 999;
 
   opacity: 0;
+  transform: translate(100%, 0);
 
   transition: opacity $primary-time $primary-cubic,
-    visibility $primary-time $primary-cubic;
+    visibility $primary-time $primary-cubic,
+    transform $primary-time $primary-cubic;
 
   &.is-open {
     display: block;
     opacity: 1;
     visibility: inherit;
+    transform: translate(0, 0);
   }
 
   @media screen and (min-width: 768px) {
