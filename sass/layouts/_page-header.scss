@@ -81,6 +81,12 @@
   }
 }
 
+.header-nav__item--tablet {
+  @media screen and (max-width: 1199px) {
+    margin-right: 0;
+  }
+}
+
 .header__contacts {
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: block;
@@ -180,6 +186,7 @@
 
   background-color: $primary-color;
   padding-left: 40px;
+  padding-right: 40px;
   padding-top: 48px;
   padding-bottom: 48px;
   font-size: 20px;
@@ -228,7 +235,12 @@
 }
 
 .contacts__tel {
-  font-size: 34px;
+  color: $accent-color;
+  font-size: 30px;
+
+  @media screen and (min-width: 480px) {
+    font-size: 34px;
+  }
 }
 
 .contacts__email {
